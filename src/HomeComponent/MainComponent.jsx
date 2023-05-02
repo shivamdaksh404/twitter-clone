@@ -23,7 +23,7 @@ export default function MainComponent() {
   },[tweetCount])
   
   function handleLikeClick(index) {
-
+    setLikes(likes+1)
     const currentPostIndex = posts.findIndex((ele) => ele.id === index);
     if (posts[currentPostIndex].isLiked === false) {
       posts[currentPostIndex].likes += 1;
